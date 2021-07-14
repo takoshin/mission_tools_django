@@ -2,5 +2,4 @@
 staticfiles
 static
 tmp/
-Pipfile
 Pipfile.lock
