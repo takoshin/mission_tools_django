@@ -1,13 +1,11 @@
 version: 2.1
 
 orbs:
-    aws-ecr: circleci/aws-ecr@6.1.0
-    aws-ecs: circleci/aws-ecs@0.0.8
+    aws-ecr: circleci/aws-ecr@7.0.0
+    aws-ecs: circleci/aws-ecs@2.2.1
 
 workflows:
-    # build_and_push_imageという名前のworkflowを定義
     build_and_push_image:
-        # workflowで実行するjobの順番を定義
         jobs:
         - aws-ecr/build-and-push-image:
             region: AWS_REGION
@@ -20,4 +18,4 @@ workflows:
             family: 'mission_tools_task'
             cluster-name: 'Studio-Mission-Tools'
             service-name: 'Studoi-Mission-Tools-API'
-            container-image-name-updates: 'container=testserverContainer,tag=${CIRCLE_SHA1}'
+            container-image-name-updates: 'container=mission_tools_django,tag=${CIRCLE_SHA1}'
