@@ -47,8 +47,8 @@ class LostArticle(models.Model):
     id = models.UUIDField(default=uuid.uuid4,
                             primary_key=True, editable=False)
     lost_article_name = models.CharField(max_length=255, blank=False)
-    place = models.CharField(max_length=255, blank=True)
-    discoverer_name = models.CharField(max_length=255, blank=True)
+    place = models.CharField(max_length=255, blank=False)
+    discoverer_name = models.CharField(max_length=255, blank=False)
     customer_name = models.CharField(max_length=255, blank=True)
     phone_number = models.CharField(validators = [phone_number_regex], max_length = 16, blank=True, null=True)
     return_date = models.CharField(max_length=255, blank=True)

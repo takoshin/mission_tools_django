@@ -5,3 +5,6 @@ static
 tmp/
 Pipfile.lock
 .devcontainer
+db.sqlite3
+
+
