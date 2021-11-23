@@ -51,7 +51,7 @@ class LostArticle(models.Model):
     discoverer_name = models.CharField(max_length=255, blank=False)
     customer_name = models.CharField(max_length=255, blank=True)
     phone_number = models.CharField(validators = [phone_number_regex], max_length = 16, blank=True, null=True)
-    return_date = models.CharField(max_length=255, blank=True)
+    return_date = models.CharField(max_length=255, blank=True)s
     staff_name = models.CharField(max_length=255, blank=True)
     returned = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
