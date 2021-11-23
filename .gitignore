@@ -1,5 +1,7 @@
 .env
+.env_prod
 staticfiles
 static
 tmp/
 Pipfile.lock
+.devcontainer
