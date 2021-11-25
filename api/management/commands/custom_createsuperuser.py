@@ -7,7 +7,7 @@ env.read_env('.env')
 class Command(createsuperuser.Command):
     help = 'Create a superuser'
 
-    def handle(self, **options):
+    def handle(self, *args, **options):
         options.setdefault('interactive', False)
         email = env.str('SUPERUSEREMAIL')
         password = env.str('SUPERUSERPASSWORD')

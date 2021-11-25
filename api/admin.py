@@ -31,14 +31,13 @@ class UserAdmin(BaseUserAdmin):
 
 class LostArticleAdmin(admin.ModelAdmin):
     fields = (
-        'lost_article_name',
+        'lost_article',
         'place',
-        'discoverer_name',
-        'customer_name',
+        'discoverer',
+        'customer',
         'phone_number',
-        'return_date',
-        'staff_name',
-        'returned',
+        'staff',
+        'state',
         'created_at',
         'updated_at',
     )
